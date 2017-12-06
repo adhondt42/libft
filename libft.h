@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/28 20:41:20 by adhondt          ###   ########.fr       */
+/*   Updated: 2017/12/06 15:38:40 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
+typedef struct		s_tetriminos
+{
+	char					**tab;
+	struct s_tetriminos		*next;
+}					t_tetri;
 typedef struct	s_list
 {
 	void			*content;
