@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2017/12/06 15:28:15 by adhondt          ###   ########.fr        #
+#    Updated: 2017/12/06 15:35:45 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ $(NAME):
 	gcc -c -Werror -Wall -Wextra $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	rm -f $(OBJ)
 
 clean:
 	rm -f $(OBJ)
