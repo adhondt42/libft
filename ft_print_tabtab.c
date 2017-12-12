@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 17:24:20 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/06 17:26:01 by adhondt          ###   ########.fr       */
+/*   Updated: 2017/12/12 15:13:07 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ void		ft_print_tabtab(char **tab)
 
 	i = 0;
 	while (tab[i])
-	{
-		ft_putstr(tab[i]);
-			i++;
-	}
+		ft_putstr(tab[i++]);
 }
