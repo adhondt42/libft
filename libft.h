@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/15 13:27:19 by adhondt          ###   ########.fr       */
+/*   Updated: 2017/12/15 16:42:16 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char			*ft_strcdup(const char *tab, char c);
 char			*ft_strccpy(char *dest, const char *src, char c);
 void			ft_print_tabtab(char **tab);
 int				ft_find_next_sqrt(int nb);
