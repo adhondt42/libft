@@ -32,6 +32,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+int				get_next_line(const int fd, char **line);
 size_t			ft_strclen(const char *src, char c);
 char			*ft_strcjoin(char const *s1, char const *s2, char c);
 char			*ft_strcdup(const char *tab, char c);
