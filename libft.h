@@ -32,6 +32,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+size_t			ft_strclen(const char *src, char c);
+char			*ft_strcjoin(char const *s1, char const *s2, char c);
 char			*ft_strcdup(const char *tab, char c);
 char			*ft_strccpy(char *dest, const char *src, char c);
 void			ft_print_tabtab(char **tab);
