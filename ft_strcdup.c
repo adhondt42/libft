@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:26:35 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/15 16:40:07 by adhondt          ###   ########.fr       */
+/*   Updated: 2017/12/19 14:35:51 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ char	*ft_strcdup(const char *tab, char c)
 	while (tab[i] != c && tab[i])
 		i++;
 	str = (char *)malloc(sizeof(*str) * (i + 1));
-	ft_strccpy (str, tab, '\n');
+	ft_strccpy (str, tab, c);
 	return (str);
 }
