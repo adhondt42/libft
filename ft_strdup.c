@@ -19,11 +19,8 @@ char	*ft_strdup(const char *tab)
 	int		i;
 
 	src = (char *)tab;
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	dest = (char*)malloc(sizeof(*src) * i + 1);
-	if (!dest)
+	i = ft_strlen(tab);
+	if ((dest = (char*)malloc(sizeof(*src) * i + 1)) == NULL)
 		return (NULL);
 	dest[i] = '\0';
 	while (i-- >= 0)
