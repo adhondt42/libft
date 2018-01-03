@@ -39,7 +39,7 @@ char	*ft_strnjoin(char const *s1, char const *s2, int n)
 	}
 	return (dest);
 }
-
+/*
 int	main()
 {
 	char *tab;
@@ -54,4 +54,4 @@ int	main()
 	dest = ft_strjoin(tab, tabd);
 	ft_putstr(dest);
 	return (0);
-}
+}*/
