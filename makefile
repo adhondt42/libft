@@ -24,6 +24,7 @@ ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c \
 ft_tolower.c ft_toupper.c ft_isup.c ft_islow.c ft_lstadd.c ft_lstdel.c \
 ft_lstdelone.c ft_lstiter.c ft_lstnew.c ft_find_next_sqrt.c ft_print_tabtab.c \
 ft_strccpy.c ft_strcdup.c ft_strcjoin.c ft_strclen.c ft_strnjoin.c \
+ft_strndup.c \
 
 OBJ = $(SRC:.c=.o)
 

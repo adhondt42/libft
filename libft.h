@@ -20,11 +20,6 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-typedef struct		s_tetriminos
-{
-	char					**tab;
-	struct s_tetriminos		*next;
-}					t_tetri;
 typedef struct	s_list
 {
 	void			*content;
@@ -32,6 +27,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char			*ft_strndup(const char *tab, int n);
 char			*ft_strnjoin(char const *s1, char const *s2, int n);
 int				get_next_line(const int fd, char **line);
 size_t			ft_strclen(const char *src, char c);
