@@ -73,6 +73,7 @@ void			*ft_memset(void *s, int c, size_t n);
 char			*ft_strnstr(const char *str, const char *to_find, size_t n);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strchr(const char *s, int c);
+char			*ft_strchruno(const char *s, int c);
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strncat(char *dest, const char *src, size_t n);
 int				ft_strcmp(const char *tab, const char *tab2);

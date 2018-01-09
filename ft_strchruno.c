@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:26:35 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/19 14:35:51 by adhondt          ###   ########.fr       */
+/*   Created: 2017/11/13 17:25:06 by adhondt           #+#    #+#             */
+/*   Updated: 2017/12/19 16:32:30 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strndup(const char *tab, int n)
+// faire resultat + 1 si on ne veux pas le charactere rechere
+char	*ft_strchruno(const char *s, int c)
 {
-	char	*str;
-	int		i;
+	char	*cs;
 
-	if (!(tab) || n <= 0)
-		return (NULL);
-	i = ft_strlen(tab);
-	i = (i > n) ? i = n : i;
-	str = (char *)malloc(sizeof(*str) * (i + 1));
-	ft_strncpy (str, tab, n);
-	return (str);
+	cs = (char *)s;
+	while (*cs != c && *cs)
+		cs++;
+	if (*cs == c)
+	{
+		cs++;
+		return (cs);
+	}
+	return (NULL);
 }
