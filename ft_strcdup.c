@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strcdup(const char *tab, char c)
 {
@@ -20,7 +21,15 @@ char	*ft_strcdup(const char *tab, char c)
 	i = 0;
 	while (tab[i] != c && tab[i])
 		i++;
-	str = (char *)malloc(sizeof(*str) * (i + 1));
-	ft_strccpy (str, tab, c);
+	//printf("\ni:%d\n tab[i - 1]:%c\n tab[i]:%c\n", i, tab[i - 1], tab[i]);
+	str = (char *)malloc(sizeof(char) * (i + 2));
+	str[i] = '\0';
+	i--;
+	while (i >= 0)
+	{
+		str[i] = tab[i];
+	//printf("\ni:%d, str[i]:%c\n", i, str[i]);
+		i--;
+	}
 	return (str);
 }
