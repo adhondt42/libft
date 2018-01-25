@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:44:47 by adhondt           #+#    #+#             */
-/*   Updated: 2018/01/24 18:46:52 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/01/25 13:32:18 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_itoa_base(int value, int base)
 	char	*string;
 	int		temp;
 	int		count;
-	int		array;
 
 	count = 0;
 	temp = value;
@@ -36,10 +35,4 @@ char	*ft_itoa_base(int value, int base)
 		value /= base;
 	}
 	return (string);
-}
-
-int		main()
-{
-	ft_putstr(ft_itoa_base(41453,8));
-	return (0);
 }

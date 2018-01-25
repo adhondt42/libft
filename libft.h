@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/20 10:59:33 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/01/25 13:31:42 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char			*ft_itoa_base(int value, int base);
 char			*ft_strndup(const char *tab, int n);
 char			*ft_strnjoin(char const *s1, char const *s2, int n);
 int				get_next_line(const int fd, char **line);
