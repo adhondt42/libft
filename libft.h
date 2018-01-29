@@ -27,6 +27,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char 			ft_n();
 char			*ft_itoa_base(int value, int base);
 char			*ft_strndup(const char *tab, int n);
 char			*ft_strnjoin(char const *s1, char const *s2, int n);
