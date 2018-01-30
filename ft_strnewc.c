@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 20:09:27 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/23 10:55:08 by adhondt          ###   ########.fr       */
+/*   Created: 2017/11/14 18:50:46 by adhondt           #+#    #+#             */
+/*   Updated: 2017/11/24 17:39:47 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_n()
+char	*ft_strnewc(size_t size, char c)
 {
-	ft_putchar('\n');
+	char	*dest;
+
+	if ((dest = (char *)malloc(sizeof(*dest) * size + 1)) == NULL)
+		return (NULL);
+	dest[size--] = '\0';
+	while ((int)size >= 0)
+	{
+		dest[size] = c;
+		size--;
+	}
+	return (dest);
 }
