@@ -27,6 +27,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+void			**ft_tabmemdup(void **tab, int i, int j);
 char			*ft_strnewc(size_t size, char c);
 int 			onlyins(char *s1, char *s2);
 void 			ft_n();
