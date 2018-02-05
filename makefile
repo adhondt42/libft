@@ -25,7 +25,7 @@ ft_tolower.c ft_toupper.c ft_isup.c ft_islow.c ft_lstadd.c ft_lstdel.c \
 ft_lstdelone.c ft_lstiter.c ft_lstnew.c ft_find_next_sqrt.c ft_print_tabtab.c \
 ft_strccpy.c ft_strcdup.c ft_strcjoin.c ft_strclen.c ft_strnjoin.c \
 ft_strndup.c ft_strchruno.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
-ft_tabmemdup.c \
+ft_tabtabdup.c ft_tablen.c \
 
 OBJ = $(SRC:.c=.o)
 

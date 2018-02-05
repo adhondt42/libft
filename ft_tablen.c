@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tabtab.c                                  :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 17:24:20 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/12 15:13:07 by adhondt          ###   ########.fr       */
+/*   Created: 2017/11/08 09:15:52 by adhondt           #+#    #+#             */
+/*   Updated: 2017/11/27 15:43:18 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_print_tabtab(char **tab)
+size_t	ft_tablen(char **src)
 {
-	int i;
+	int		i;
 
-	if (tab == NULL)
-		return ;
 	i = 0;
-	while (tab[i])
-		ft_putstr(tab[i++]);
+	while (src[i] != NULL)
+		i++;
+	return (i);
 }

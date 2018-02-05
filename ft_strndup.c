@@ -21,7 +21,8 @@ char	*ft_strndup(const char *tab, int n)
 		return (NULL);
 	i = ft_strlen(tab);
 	i = (i > n) ? i = n : i;
-	str = (char *)malloc(sizeof(*str) * (i + 1));
-	ft_strncpy (str, tab, n);
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	str[i] = '\0';
+	ft_strncpy (str, tab, i);
 	return (str);
 }
