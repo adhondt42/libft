@@ -17,7 +17,6 @@ char	**ft_tabtabdup(char **src, int itt, int it)
 		{
 			
 			tlen = (int)(ft_strlen(src[k])) > it ? it : (int)ft_strlen(src[k]);
-			printf("tlen : %d, strlensrck : %zu", tlen, ft_strlen(src[k]));
 			dest[k] = ft_strndup(src[k], tlen);
 			k++;
 		}
