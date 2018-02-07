@@ -27,6 +27,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char			*ft_strrchrrev(char *s, char c);
 size_t			ft_tablen(char **src);
 char			**ft_tabtabdup(char **tab, int itt, int it);
 char			*ft_strnewc(size_t size, char c);
