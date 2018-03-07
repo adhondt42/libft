@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/01/25 13:31:16 by adhondt          ###   ########.fr        #
+#    Updated: 2018/03/07 21:10:35 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ft_tolower.c ft_toupper.c ft_isup.c ft_islow.c ft_lstadd.c ft_lstdel.c \
 ft_lstdelone.c ft_lstiter.c ft_lstnew.c ft_find_next_sqrt.c ft_print_tabtab.c \
 ft_strccpy.c ft_strcdup.c ft_strcjoin.c ft_strclen.c ft_strnjoin.c \
 ft_strndup.c ft_strchruno.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
-ft_tabtabdup.c ft_tablen.c ft_strrchrrev.c \
+ft_tabtabdup.c ft_tablen.c ft_strrchrrev.c ft_initializetab.c ft_sorttab.c \
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tabtab.c                                  :+:      :+:    :+:   */
+/*   ft_initializetab.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 17:24:20 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/05 16:16:44 by adhondt          ###   ########.fr       */
+/*   Created: 2018/03/05 16:27:52 by adhondt           #+#    #+#             */
+/*   Updated: 2018/03/07 20:01:10 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_print_tabtab(char **tab)
+char		**ft_initializetab(int size)
 {
-	int i;
+	char	**tab;
 
-	if (tab == NULL)
-		return ;
-	i = 0;
-	while (tab[i])
+	if (size < 0)
 	{
-		ft_putstr(tab[i++]);
-		ft_n();
+		ft_putstr("\n-- Error ft_initializetab, size < 0 --\n");
+		return (NULL);
 	}
+	tab = (char **)malloc(sizeof(char *) * size);
+	while (size > 0)
+		tab[--size] = NULL;
+	return (tab);
 }
