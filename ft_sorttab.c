@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 21:08:56 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/07 21:53:14 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/03/22 15:04:42 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_sorttab(char **tab)
 		{
 			if (ft_strcmp(tab[j], tab[j + 1]) > 0)
 			{
-				tmp = tab[j  + 1];
+				tmp = tab[j + 1];
 				tab[j + 1] = tab[j];
 				tab[j] = tmp;
 			}

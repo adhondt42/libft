@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:54:29 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/24 00:57:26 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/03/22 15:09:00 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ char	*ft_strrchrrev(char *s, char c)
 		i--;
 	if (s[i] == c)
 		s[i] = '\0';
-		return (s);
+	return (s);
 	return (NULL);
 }

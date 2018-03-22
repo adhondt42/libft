@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/22 12:57:09 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/03/22 15:11:55 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char			*ft_strrchrrev(char *s, char c);
 size_t			ft_tablen(char **src);
 char			**ft_tabtabdup(char **tab, int itt, int it);
 char			*ft_strnewc(size_t size, char c);
-int 			onlyins(char *s1, char *s2);
-void 			ft_n();
+int				onlyins(char *s1, char *s2);
+void			ft_n();
 char			*ft_itoa_base(int value, int base);
 char			*ft_strndup(const char *tab, int n);
 char			*ft_strnjoin(char const *s1, char const *s2, int n);

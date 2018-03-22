@@ -6,12 +6,12 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:25:06 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/19 16:32:30 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/03/22 15:06:16 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// faire resultat + 1 si on ne veux pas le charactere rechere
+
 char	*ft_strchruno(const char *s, int c)
 {
 	char	*cs;
