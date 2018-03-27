@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/27 15:41:32 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/03/27 19:49:07 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
 char			*ft_strnstr(const char *str, const char *to_find, size_t n);
 char			*ft_strrchr(const char *s, int c);
+char			*ft_strrchrmu(const char *s, int c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strchruno(const char *s, int c);
 char			*ft_strcat(char *dest, const char *src);
