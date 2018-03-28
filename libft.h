@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/28 17:26:52 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/03/28 19:11:53 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+void			ft_putint(int *name, char *separator);
+int				*ft_intnew(size_t size, int value);
 int				ft_index(const char *str, char c);
 void			ft_free_tab(char **tab);
 int				get_next_line(const int fd, char **line);

@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/03/28 17:27:15 by adhondt          ###   ########.fr        #
+#    Updated: 2018/03/28 19:12:30 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ ft_strccpy.c ft_strcdup.c ft_strcjoin.c ft_strclen.c ft_strnjoin.c \
 ft_strndup.c ft_strchruno.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
 ft_tabtabdup.c ft_tablen.c ft_strrchrrev.c ft_initializetab.c ft_sorttab.c \
 ft_strjoin_free.c get_next_line.c ft_free_tab.c ft_strrchrmu.c ft_index.c \
+ft_intnew.c ft_putint.c \
 
 OBJ = $(SRC:.c=.o)
 
