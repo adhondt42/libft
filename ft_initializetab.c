@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 16:27:52 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/26 20:01:32 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/12 10:51:31 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		**ft_initializetab(int size)
 
 	if (size < 0)
 	{
-		ft_putstr("\n-- Error ft_initializetab, size < 0 --\n", "");
+		ft_putstr("\n-- Error ft_initializetab, size < 0 --\n");
 		return (NULL);
 	}
 	if ((tab = (char **)malloc(sizeof(char *) * size)) == NULL)

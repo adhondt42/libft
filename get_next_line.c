@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/22 13:55:33 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/22 15:03:08 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/12 11:02:38 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int				get_next_line(const int fd, char **line)
 		if (fcontent == NULL)
 			fcontent = ft_strdup(buf);
 		else
-			fcontent = ft_strjoin_free(fcontent, buf, 1);
+			fcontent = ft_strjoin_f(fcontent, buf, 1);
 	}
 	if (n == 1)
 		save = fcontent;

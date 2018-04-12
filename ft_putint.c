@@ -7,9 +7,9 @@ void	ft_putint(int *name, char *separator)
 	i = 1;
 	while (i < name[0] + 1)
 	{
-		ft_putstr(ft_itoa(name[i]), "");
+		ft_putstr(ft_itoa(name[i]));
 		if (i + 1 < name[0] + 1)
-			ft_putstr(separator, "");
+			ft_putstr(separator);
 		i++;
 	}
 }

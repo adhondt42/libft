@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_print_tabtab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:52:11 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/26 13:32:07 by adhondt          ###   ########.fr       */
+/*   Created: 2017/12/06 17:24:20 by adhondt           #+#    #+#             */
+/*   Updated: 2018/04/12 10:53:50 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_free(char const *s1, char const *s2, int j)
+void		ft_puttab(char **tab, char *end)
 {
-	char	*dest;
-	int		i;
+	int i;
 
-	if (!(s1 && s2))
-		return (NULL);
-	i = ft_strlen((char*)s1) + ft_strlen((char*)s2);
-	if ((dest = (char *)malloc(sizeof(dest) * i + 1)) == NULL)
-		return (NULL);
-	dest = ft_strcpy(dest, s1);
-	dest = ft_strcat(dest, s2);
-	if (j == 1 || j == 3)
-		free((void *)s1);
-	if (j == 2 || j == 3)
-		free((void *)s2);
-	return (dest);
+	if (tab == NULL)
+		return ;
+	i = 0;
+	while (tab[i])
+	{
+		ft_putstr(tab[i++]);
+		if (end)
+			ft_putstr(end);
+	}
 }

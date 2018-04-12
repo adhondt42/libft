@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/28 19:11:53 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/12 11:01:22 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <sys/types.h>
@@ -28,6 +29,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char			**addtotab_f(char **tab, char *str, size_t i);
+char			**addtotab(char **tab, char *str);
 void			ft_putint(int *name, char *separator);
 int				*ft_intnew(size_t size, int value);
 int				ft_index(const char *str, char c);
@@ -49,7 +52,7 @@ size_t			ft_strclen(const char *src, char c);
 char			*ft_strcjoin(char const *s1, char const *s2, char c);
 char			*ft_strcdup(const char *tab, char c);
 char			*ft_strccpy(char *dest, const char *src, char c);
-void			ft_put2str(char **tab, char *endl);
+void			ft_puttab(char **tab, char *end);
 int				ft_find_next_sqrt(int nb);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
@@ -64,7 +67,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s);
 char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_strjoin_free(char const *s1, char const *s2, int j);
+char			*ft_strjoin_f(char const *s1, char const *s2, int j);
 char			*ft_itoa(int n);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putendl_fd(char const *s, int fd);
@@ -74,7 +77,7 @@ int				ft_strequ(char const *s1, char const *s2);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 void			ft_putnbr(int n);
 void			ft_putendl(char const *s);
-void			ft_putstr(char const *s, char *end);
+void			ft_putstr(char const *s);
 void			ft_putchar(char c);
 void			ft_strclr(char *s);
 void			ft_strdel(char **as);
