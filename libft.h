@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 11:01:22 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/12 11:08:05 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int				ft_index(const char *str, char c);
 void			ft_free_tab(char **tab);
 int				get_next_line(const int fd, char **line);
 void			ft_sorttab(char **tab);
-char			**ft_initializetab(int size);
+char			**ft_initializetab(size_t size);
 char			*ft_strrchrrev(char *s, char c);
 size_t			ft_tablen(char **src);
 char			**ft_tabtabdup(char **tab, int itt, int it);

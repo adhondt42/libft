@@ -6,21 +6,16 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 16:27:52 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 10:51:31 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/12 11:07:52 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**ft_initializetab(int size)
+char		**ft_initializetab(size_t size)
 {
 	char	**tab;
 
-	if (size < 0)
-	{
-		ft_putstr("\n-- Error ft_initializetab, size < 0 --\n");
-		return (NULL);
-	}
 	if ((tab = (char **)malloc(sizeof(char *) * size)) == NULL)
 		return (NULL);
 	while (size > 0)
