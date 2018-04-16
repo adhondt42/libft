@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_tab.c                                      :+:      :+:    :+:   */
+/*   ft_swapptr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 15:39:02 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/27 15:40:58 by adhondt          ###   ########.fr       */
+/*   Created: 2018/04/16 18:45:26 by adhondt           #+#    #+#             */
+/*   Updated: 2018/04/16 18:46:51 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_tab(char **tab)
+void		ft_swapptr(char **ptr, char **ptr2)
 {
-	int	i;
+	char	*tmp;
 
-	i = 0;
-	while (tab[i] != 0)
-		free(tab[i++]);
-	free(tab);
-	return ;
+	tmp = *ptr;
+	*ptr  = *ptr2;
+	*ptr2 = tmp;
 }

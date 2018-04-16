@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   addtotab.c                                         :+:      :+:    :+:   */
+/*   ft_print_tabtab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/12 10:35:01 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 11:06:02 by adhondt          ###   ########.fr       */
+/*   Created: 2017/12/06 17:24:20 by adhondt           #+#    #+#             */
+/*   Updated: 2018/04/16 19:46:38 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**addtotab(char **tab, char *str)
+void		puttab(char **tab, char *end)
 {
-	int	tablen;
-	char **ret;
+	int i;
 
-	tablen = ft_tablen(tab);
-	if ((ret = (char **)malloc(sizeof(char *) * (tablen + 2))) == NULL)
-		return NULL;
-	ret[tablen + 1] = NULL;
-	ret[tablen] = ft_strdup(str);
-	while (--tablen >= 0)
-		ret[tablen] = ft_strdup(tab[tablen]);
-	return (ret);
+	if (tab == NULL)
+		return ;
+	i = 0;
+	while (tab[i])
+	{
+		ft_putstr(tab[i++]);
+		if (end)
+			ft_putstr(end);
+	}
 }

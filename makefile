@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/04/12 11:02:14 by adhondt          ###   ########.fr        #
+#    Updated: 2018/04/16 19:46:53 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,23 +26,25 @@ ft_lstdelone.c ft_lstiter.c ft_lstnew.c ft_find_next_sqrt.c \
 ft_strccpy.c ft_strcdup.c ft_strcjoin.c ft_strclen.c ft_strnjoin.c \
 ft_strndup.c ft_strchruno.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
 ft_tabtabdup.c ft_tablen.c ft_strrchrrev.c ft_initializetab.c ft_sorttab.c \
-ft_strjoin_f.c get_next_line.c ft_free_tab.c ft_strrchrmu.c ft_index.c \
-ft_intnew.c ft_putint.c addtotab_f.c  addtotab.c ft_puttab.c \
+ft_strjoin_f.c get_next_line.c ft_freetab.c ft_strrchrmu.c ft_index.c \
+ft_intnew.c ft_putint.c addtotab_f.c puttab.c ft_put2str.c ft_put3str.c \
+ft_swapptr.c sorttab_ascii.c sorttab_rev.c \
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Werror -Wall -Wextra $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-	rm -f $(OBJ)
+	@gcc -c -Werror -Wall -Wextra $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@rm -f $(OBJ)
+	@echo "\033[33;32mLibft.a successfully generated !\nLast file added: sort ascii & rev \033[0m"
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

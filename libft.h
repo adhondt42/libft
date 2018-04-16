@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 11:08:05 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/16 19:47:09 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <unistd.h>
+# include <errno.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -29,12 +31,17 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+void			sorttab_ascii(char **tab);
+void			sorttab_rev(char **tab);
+void			sorttab_ascii(char **tab);
+void			ft_swapptr(char **ptr, char **ptr2);
+void			ft_put2str(char *str, char *strb);
+void			ft_put3str(char *str, char *strb, char *strc);
 char			**addtotab_f(char **tab, char *str, size_t i);
-char			**addtotab(char **tab, char *str);
 void			ft_putint(int *name, char *separator);
 int				*ft_intnew(size_t size, int value);
 int				ft_index(const char *str, char c);
-void			ft_free_tab(char **tab);
+void			ft_freetab(char **tab);
 int				get_next_line(const int fd, char **line);
 void			ft_sorttab(char **tab);
 char			**ft_initializetab(size_t size);
@@ -52,7 +59,7 @@ size_t			ft_strclen(const char *src, char c);
 char			*ft_strcjoin(char const *s1, char const *s2, char c);
 char			*ft_strcdup(const char *tab, char c);
 char			*ft_strccpy(char *dest, const char *src, char c);
-void			ft_puttab(char **tab, char *end);
+void			puttab(char **tab, char *end);
 int				ft_find_next_sqrt(int nb);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
