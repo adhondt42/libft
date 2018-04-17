@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/04/17 10:58:15 by adhondt          ###   ########.fr        #
+#    Updated: 2018/04/17 12:39:51 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ft_strndup.c ft_strchruno.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
 tablen.c ft_strrchrrev.c ft_initializetab.c ft_strjoin_f.c \
 get_next_line.c ft_freetab.c ft_strrchrmu.c ft_index.c ft_intnew.c ft_putint.c \
 addtotab_f.c puttab.c ft_put2str.c ft_put3str.c ft_swapptr.c sorttab_ascii.c \
-sorttab_rev.c \
+sorttab_rev.c intlen.c ft_ftype.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -39,8 +39,8 @@ $(NAME):
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@rm -f $(OBJ)
-	@echo "\033[33;32mLibft.a successfully generated !\nLast file added: sort ascii & rev \033[0m"
-
+	@echo "\033[33;32mLibft.a successfully generated. Last files added :"
+	@echo "sorttab_rev.c intlen.c ft_ftype.c ""\033[0m"
 clean:
 	@rm -f $(OBJ)
 

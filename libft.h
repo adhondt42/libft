@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/17 10:58:23 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/17 12:38:34 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+char			ft_ftype(int st_mode);
+int				intlen(int nb);
 void			sorttab_ascii(char **tab);
 void			sorttab_rev(char **tab);
 void			sorttab_ascii(char **tab);
