@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 19:01:39 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/16 19:02:43 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/17 10:59:37 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void			sorttab_rev(char **tab)
 	char		*tmp;
 
 	i = 0;
-	while (i < (int)ft_tablen(tab) - i - 1)
+	while (i < (int)tablen(tab) - i - 1)
 	{
 		tmp = tab[i];
-		tab[i] = tab[ft_tablen(tab) - i - 1];
-		tab[ft_tablen(tab) - i - 1] = tmp;
+		tab[i] = tab[tablen(tab) - i - 1];
+		tab[tablen(tab) - i - 1] = tmp;
 		i++;
 	}
 }

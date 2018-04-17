@@ -6,13 +6,13 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:15:52 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/27 15:43:18 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/17 10:55:13 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_tablen(char **src)
+size_t	tablen(char **src)
 {
 	int		i;
 
