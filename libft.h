@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/17 12:38:34 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/17 17:19:37 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+struct stat		*get_lstats(char *path, char *name);
+char			*createpath(char *path, char *name);
+void			ft_putnstr(const char *str, size_t n);
+void			ft_putstr_c(char *str, char *color);
 char			ft_ftype(int st_mode);
 int				intlen(int nb);
 void			sorttab_ascii(char **tab);
@@ -39,6 +43,7 @@ void			sorttab_ascii(char **tab);
 void			ft_swapptr(char **ptr, char **ptr2);
 void			ft_put2str(char *str, char *strb);
 void			ft_put3str(char *str, char *strb, char *strc);
+void			ft_put4str(char *str, char *strb, char *strc, char *strd);
 char			**addtotab_f(char **tab, char *str, size_t i);
 void			ft_putint(int *name, char *separator);
 int				*ft_intnew(size_t size, int value);
