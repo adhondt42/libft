@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/17 17:19:37 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/18 13:30:42 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <errno.h>
+# include <dirent.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -31,6 +32,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+int				dirlen(char *path, int a);
+char			**ft_readdir(char *path, int a);
 struct stat		*get_lstats(char *path, char *name);
 char			*createpath(char *path, char *name);
 void			ft_putnstr(const char *str, size_t n);
@@ -49,6 +52,10 @@ void			ft_putint(int *name, char *separator);
 int				*ft_intnew(size_t size, int value);
 int				ft_index(const char *str, char c);
 void			ft_freetab(char **tab);
+void			ft_free2tab(char **tab, char **tab2);
+void			free2(void *f1, void *f2);
+void			free3(void *f1, void *f2, void *f3);
+void			free4(void *f1, void *f2, void *f3, void *f4);
 int				get_next_line(const int fd, char **line);
 char			**ft_initializetab(size_t size);
 char			*ft_strrchrrev(char *s, char c);

@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/04/17 17:19:47 by adhondt          ###   ########.fr        #
+#    Updated: 2018/04/18 13:31:00 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ tablen.c ft_strrchrrev.c ft_initializetab.c ft_strjoin_f.c \
 get_next_line.c ft_freetab.c ft_strrchrmu.c ft_index.c ft_intnew.c ft_putint.c \
 addtotab_f.c puttab.c ft_put2str.c ft_put3str.c ft_swapptr.c sorttab_ascii.c \
 sorttab_rev.c intlen.c ft_ftype.c ft_put4str.c ft_putstr_c.c ft_putnstr.c \
-createpath.c get_lstat.c \
+createpath.c get_lstat.c ft_readdir.c dirlen.c free2.c free3.c free4.c \
+ft_free2tab.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -41,7 +42,7 @@ $(NAME):
 	@ranlib $(NAME)
 	@rm -f $(OBJ)
 	@echo "\033[33;32mLibft.a successfully generated. Last files added :"
-	@echo "sorttab_rev.c intlen.c ft_ftype.c ft_put4str.c ft_putstr_c ft_putnstr" "\033[0m"
+	@echo "free2-4.c" "\033[0m"
 clean:
 	@rm -f $(OBJ)
 
