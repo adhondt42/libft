@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 15:01:42 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/17 15:16:14 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/18 15:04:19 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void			ft_putstr_c(char *str, char *color)
 
 	i = 0;
 	while (i < 7 && ft_strcmp(colors[i], color) != 0)
-			i++;
+		i++;
 	ft_put4str("\033[", code[i], str, "\033[39m");
 }

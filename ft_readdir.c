@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 11:39:05 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/18 13:07:59 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/18 15:06:34 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char				**ft_readdir(char *path, int a)
 	i = 0;
 	if (!(dir = opendir(path)))
 	{
-		ft_put4str(path," : Error ft_readdir :", strerror(errno), "\n");
+		ft_put4str(path, " : Error ft_readdir :", strerror(errno), "\n");
 		return (NULL);
 	}
 	if (!(files = (char **)malloc(sizeof(char *) * (dirlen(path, a) + 1))))
@@ -30,7 +30,7 @@ char				**ft_readdir(char *path, int a)
 	while (dir && (dirent = readdir(dir)))
 	{
 		if (!a && dirent->d_name[0] == '.')
-			 ;
+			;
 		else
 			files[i++] = ft_strdup(dirent->d_name);
 	}

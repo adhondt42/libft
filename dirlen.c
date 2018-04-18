@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 11:50:44 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/18 11:59:57 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/04/18 15:03:18 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int					dirlen(char *path, int a)
 	dirlen = 0;
 	if (!(dir = opendir(path)))
 	{
-		ft_put4str(path," : Error dirlen :", strerror(errno), "\n");
+		ft_put4str(path, " : Error dirlen :", strerror(errno), "\n");
 		return (0);
 	}
 	while ((dirent = readdir(dir)))
 	{
 		if (a == 0 && dirent->d_name[0] == '.')
-			 ;
+			;
 		else
 			dirlen++;
 	}
