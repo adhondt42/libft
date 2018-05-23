@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:23:15 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:23:34 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:15:25 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 void				*ft_memset(void *s, int c, size_t n)
 {

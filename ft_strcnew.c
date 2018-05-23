@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 19:46:24 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:24:55 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:27:23 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 char		*ft_strcnew(size_t n, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 12:05:40 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/18 15:06:13 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:22:24 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 int		intlen(int nb)
 {

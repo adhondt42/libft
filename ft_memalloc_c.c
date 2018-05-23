@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:11:02 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 14:39:13 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:15:10 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 void		*ft_memalloc_c(size_t size, int c)
 {

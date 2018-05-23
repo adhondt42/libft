@@ -6,20 +6,20 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:15:52 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 14:29:11 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:19:01 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
-int	ft_strlen(const char *src)
+size_t			ft_strlen(const char *str)
 {
 	int		i;
 
-	if (!src)
+	if (!str)
 		return (0);
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }

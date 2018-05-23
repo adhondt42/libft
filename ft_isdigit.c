@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:58:23 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/24 01:22:20 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:14:25 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

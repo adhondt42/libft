@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/18 13:30:42 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:31:57 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,17 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+
+
+
+
+char			*add_nendchar(char *str, char c, size_t n);
+char			*add_nfrontchar(char *str, char c, size_t n);
+char			*add_frontchar(char *str, char c);
+char			*ft_chardup(char c);
+void			*ft_memalloc_c(size_t size, int c);
+char			*ft_strcnew(size_t n, char c);
+int				pos_in_str(char c, char *str);
 int				dirlen(char *path, int a);
 char			**ft_readdir(char *path, int a);
 struct stat		*get_lstats(char *path, char *name);

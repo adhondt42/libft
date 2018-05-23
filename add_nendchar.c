@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 18:45:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:22:23 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:26:12 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 char					*add_nendchar(char *str, char c, size_t n)
 {

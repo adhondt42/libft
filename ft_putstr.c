@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 20:10:54 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 10:46:15 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:16:16 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

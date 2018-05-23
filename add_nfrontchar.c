@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 18:44:13 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:22:03 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:26:38 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 char		*add_nfrontchar(char *str, char c, size_t n)
 {

@@ -6,15 +6,15 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:44:47 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/16 21:31:47 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:25:35 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
-char	*ft_itoa_base(int value, int base, int upper)
+char	*ft_itoa_base(int value, int base)
 {
-	char	*str;
+	char	*string;
 	int		temp;
 	int		count;
 
@@ -25,16 +25,13 @@ char	*ft_itoa_base(int value, int base, int upper)
 		count++;
 		temp /= base;
 	}
-	str = (char *)malloc(sizeof(char) * (count + 1));
-	str[count--] = '\0';
+	string = (char *)malloc(sizeof(char) * (count + 1));
+	string[count--] = '\0';
 	while (value != 0)
 	{
-		str[count] = value % base;
-		if (upper)
-			str[count] > 9 ? str[count--] += 55 : (str[count--] += '0');
-		else
-			str[count] > 9 ? str[count--] += 87 : (str[count--] += '0');
+		string[count] = value % base;
+		string[count] > 9 ? string[count--] += 55 : (string[count--] += '0');
 		value /= base;
 	}
-	return (str);
+	return (string);
 }

@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/22 15:07:26 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/16 14:45:47 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:27:00 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 char	*ft_chardup(char c)
 {

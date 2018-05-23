@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:22:44 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 14:31:14 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:14:43 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "libft.h"
 
 static void	itoa_negatif(int *n, int *negatif, int *len)
 {
