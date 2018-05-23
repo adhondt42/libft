@@ -5,23 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 11:31:53 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/23 22:21:16 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/22 21:24:35 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:24:36 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strcpy(char *dest, const char *str)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	int		j;
+	int	i;
 
-	j = 0;
-	while (str[j])
-	{
-		dest[j] = str[j];
-		j++;
-	}
-	dest[j] = '\0';
+	i = -1;
+	while (src[++i])
+		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }

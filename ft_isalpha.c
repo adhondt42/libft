@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:58:23 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/10 16:32:20 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/18 14:57:23 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
 int	ft_isalpha(int c)
 {

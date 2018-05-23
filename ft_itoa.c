@@ -5,48 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:44:47 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/22 12:44:02 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/22 21:22:44 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/23 14:31:14 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-static void	ft_neg(int *n, int *count, int *neg)
+static void	itoa_negatif(int *n, int *negatif, int *len)
 {
 	if (*n < 0)
 	{
 		*n *= -1;
-		*count += 1;
-		*neg = 1;
+		*negatif = 1;
 	}
 	else
-		*neg = 0;
+		*negatif = 0;
+	*len += *negatif;
 }
 
 char		*ft_itoa(int n)
 {
-	int		count;
-	int		j;
-	char	*num;
-	int		neg;
+	int		len;
+	int		tmp;
+	int		negatif;
+	char	*new;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	count = 1;
-	ft_neg(&n, &count, &neg);
-	j = n;
-	while (j /= 10)
-		count++;
-	if ((num = (char *)malloc(sizeof(char) * count + 1)) == NULL)
+	tmp = n;
+	len = 1;
+	while (tmp /= 10)
+		len++;
+	itoa_negatif(&n, &negatif, &len);
+	if ((new = (char *)malloc(sizeof(char) * (len + 1))) == NULL)
 		return (NULL);
-	num[count] = '\0';
-	while (count-- >= 0)
+	new[len] = '\0';
+	while (len--)
 	{
-		num[count] = (n % 10) + '0';
+		new[len] = n % 10 + '0';
 		n /= 10;
 	}
-	if (neg == 1)
-		num[0] = '-';
-	return (num);
+	if (negatif)
+		new[0] = '-';
+	return (new);
 }

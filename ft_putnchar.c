@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 11:31:53 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/16 10:38:59 by adhondt          ###   ########.fr       */
+/*   Created: 2017/11/14 20:09:27 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/16 18:28:35 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+void	ft_putnchar(char c, int n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n && src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	while (n-- > 0)
+		write(1, &c, 1);
 }

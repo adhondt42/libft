@@ -5,27 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:12:17 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/23 23:14:41 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/22 21:24:08 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:24:10 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {
 	int		i;
-	int		j;
+	char	*csrc;
 
-	j = 0;
-	i = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
+	i = ft_strlen(dest);
+	csrc = (char *)src;
+	while (*csrc)
 	{
-		dest[i] = src[j];
+		dest[i] = *csrc;
 		i++;
-		j++;
+		csrc++;
 	}
 	dest[i] = '\0';
 	return (dest);

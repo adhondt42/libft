@@ -5,19 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 18:11:02 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/28 20:44:51 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/22 21:23:05 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:23:06 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
 void	*ft_memalloc(size_t size)
 {
-	void	*dest;
+	void	*new;
 
-	if ((dest = (void *)malloc(size)) == NULL)
+	new = (void *)malloc(size);
+	if (new == NULL)
 		return (NULL);
-	ft_memset(dest, 0, size);
-	return (dest);
+	ft_memset(new, 0, size);
+	return (new);
 }

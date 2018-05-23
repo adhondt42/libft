@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   pos_in_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:54:29 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/22 15:09:00 by adhondt          ###   ########.fr       */
+/*   Created: 2018/04/27 15:37:01 by adhondt           #+#    #+#             */
+/*   Updated: 2018/04/27 15:37:16 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strrchrrev(char *s, char c)
+int				pos_in_str(char c, char *str)
 {
-	int		i;
+	int			i;
 
-	if (!s || !c)
-		return (NULL);
-	i = ft_strlen(s);
-	while (i >= 0 && s[i] != c)
-		i--;
-	if (s[i] == c)
-		s[i] = '\0';
-	return (s);
-	return (NULL);
+	i = 0;
+	if (c == 0 || !str)
+		return (-1);
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (i);
+		else
+			i++;
+	}
+	return (-1);
 }

@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:54:29 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/18 15:05:01 by adhondt          ###   ########.fr       */
+/*   Created: 2017/11/14 18:11:02 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/23 14:39:13 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strrchrmu(const char *s, int c)
+void		*ft_memalloc_c(size_t size, int c)
 {
-	int		i;
-	int		j;
-	char	*cs;
-	char	*ret;
+	char	*str;
+	size_t	i;
 
-	j = 0;
-	cs = (char *)s;
-	i = ft_strlen(s);
-	while (i >= 0 && cs[i] != (char)c)
-		i--;
-	if (cs[i] == (const char)c)
-	{
-		i++;
-		ret = ft_strdup(cs + i);
-		return ((char *)ret);
-	}
-	return (NULL);
+	i = 0;
+	str = (char *)malloc(sizeof(char) * (size + 1));
+	while (i != size)
+		str[i++] = c;
+	str[size] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/04/18 13:31:00 by adhondt          ###   ########.fr        #
+#    Updated: 2018/05/23 15:55:04 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,19 +18,20 @@ ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c \
 ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_strcat.c ft_strchr.c \
 ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c \
-ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c \
+ft_striter.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c \
 ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c \
 ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c \
 ft_tolower.c ft_toupper.c ft_isup.c ft_islow.c ft_lstadd.c ft_lstdel.c \
 ft_lstdelone.c ft_lstiter.c ft_lstnew.c ft_find_next_sqrt.c \
-ft_strccpy.c ft_strcdup.c ft_strcjoin.c ft_strclen.c ft_strnjoin.c \
-ft_strndup.c ft_strchruno.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
-tablen.c ft_strrchrrev.c ft_initializetab.c ft_strjoin_f.c \
-get_next_line.c ft_freetab.c ft_strrchrmu.c ft_index.c ft_intnew.c ft_putint.c \
+ft_strccpy.c ft_strcdup.c ft_strclen.c ft_strnjoin.c \
+ft_strndup.c ft_itoa_base.c ft_n.c onlyins.c ft_strnewc.c \
+tablen.c ft_initializetab.c ft_strjoin_f.c \
+get_next_line.c ft_freetab.c ft_index.c ft_intnew.c ft_putint.c \
 addtotab_f.c puttab.c ft_put2str.c ft_put3str.c ft_swapptr.c sorttab_ascii.c \
 sorttab_rev.c intlen.c ft_ftype.c ft_put4str.c ft_putstr_c.c ft_putnstr.c \
 createpath.c get_lstat.c ft_readdir.c dirlen.c free2.c free3.c free4.c \
-ft_free2tab.c \
+ft_free2tab.c add_frontchar.c add_nendchar.c add_nfrontchar.c ft_chardup.c \
+ft_memalloc_c.c ft_strcnew.c pos_in_str.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -41,8 +42,7 @@ $(NAME):
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@rm -f $(OBJ)
-	@echo "\033[33;32mLibft.a successfully generated. Last files added :"
-	@echo "free2-4.c" "\033[0m"
+	@echo "\033[33;32mLibft.a successfully generated."
 clean:
 	@rm -f $(OBJ)
 

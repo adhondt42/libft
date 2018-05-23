@@ -5,31 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 17:53:51 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/24 01:56:45 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/17 22:40:59 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/17 22:41:25 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strstr(const char *string, const char *pik)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int		i;
-	int		j;
+	int	i;
+	int	p;
+	int	n;
 
 	i = 0;
-	if (pik[i] == '\0')
-		return ((char *)string);
-	while (string[i])
+	p = 0;
+	if (ft_strlen(needle) == 0)
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
 	{
-		j = 0;
-		while (string[i + j] == pik[j] && string[i + j])
+		p = 0;
+		if (needle[p++] == haystack[i])
 		{
-			if (pik[j + 1] == '\0')
-				return ((char *)(string + i));
-			j++;
+			n = i;
+			i++;
+			while (needle[p] != '\0' && needle[p] == haystack[i++])
+				p++;
+			if (needle[p] == '\0')
+				return ((char *)&haystack[i - p]);
+			i = n;
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

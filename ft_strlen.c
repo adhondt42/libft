@@ -6,18 +6,18 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:15:52 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/27 15:43:18 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 14:29:11 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-size_t	ft_strlen(const char *src)
+int	ft_strlen(const char *src)
 {
 	int		i;
-	char	*str;
 
-	str = (char *)src;
+	if (!src)
+		return (0);
 	i = 0;
 	while (src[i] != '\0')
 		i++;

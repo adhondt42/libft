@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:26:35 by adhondt           #+#    #+#             */
-/*   Updated: 2017/12/19 14:35:51 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/15 19:46:24 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:24:55 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strndup(const char *tab, int n)
+char		*ft_strcnew(size_t n, char c)
 {
-	char	*str;
-	int		i;
+	char	*ret;
+	size_t	i;
 
-	if (!(tab) || n <= 0)
+	i = 0;
+	if (!(ret = (char *)malloc(sizeof(char) * (n + 1))))
 		return (NULL);
-	i = ft_strlen(tab);
-	i = (i > n) ? i = n : i;
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	str[i] = '\0';
-	ft_strncpy (str, tab, n);
-	return (str);
+	ret[n] = '\0';
+	while (i != n)
+		ret[i++] = c;
+	return (ret);
 }

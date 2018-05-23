@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   add_nfrontchar.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:52:11 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/28 20:42:19 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/16 18:44:13 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:22:03 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strcjoin(char const *s1, char const *s2, char c)
+char		*add_nfrontchar(char *str, char c, size_t n)
 {
-	char	*dest;
-	int		i;
+	char	*ret;
+	size_t	i;
 
-	if (!(s1 && s2))
-		return (NULL);
-	i = ft_strlen((char*)s1) + ft_strclen((char*)s2, c);
-	if ((dest = (char *)malloc(sizeof(dest) * i + 1)) == NULL)
-		return (NULL);
 	i = 0;
-	while (*s1)
-	{
-		dest[i++] = *s1;
-		s1++;
-	}
-	while (*s2 && *s2 != c)
-	{
-		dest[i++] = *s2;
-		s2++;
-	}
-	dest[i++] = '\0';
-	return (dest);
+	if (!(ret = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1 + n))))
+		return (NULL);
+	ret[ft_strlen(str) + n] = '\0';
+	while (i != n)
+		ret[i++] = c;
+	ft_strcpy(ret + n, str);
+	free(str);
+	return (ret);
 }

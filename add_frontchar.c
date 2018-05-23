@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   add_frontchar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:52:00 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/24 17:46:06 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/16 18:40:43 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:21:49 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char		*add_frontchar(char *str, char c)
 {
-	int i;
+	char	*ret;
 
-	i = 0;
-	if (!s || !f)
-		return ;
-	while (s[i])
+	if (!str)
 	{
-		f(i, s + i);
-		i++;
+		free(str);
+		return (ft_strdup("\0"));
 	}
+	if (!(ret = (char *)malloc(sizeof(char) * (ft_strlen(str) + 2))))
+		return (NULL);
+	ret[0] = c;
+	ret[ft_strlen(str)] = '\0';
+	ft_strcpy(ret + 1, str);
+	free(str);
+	return (ret);
 }

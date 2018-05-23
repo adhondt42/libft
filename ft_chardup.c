@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 17:25:06 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/22 15:06:16 by adhondt          ###   ########.fr       */
+/*   Created: 2018/03/22 15:07:26 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/16 14:45:47 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-char	*ft_strchruno(const char *s, int c)
+char	*ft_chardup(char c)
 {
-	char	*cs;
+	char	*dest;
 
-	cs = (char *)s;
-	while (*cs != c && *cs)
-		cs++;
-	if (*cs == c)
-	{
-		cs++;
-		return (cs);
-	}
-	return (NULL);
+	dest = (char *)malloc(sizeof(char) * 2);
+	dest[0] = c;
+	dest[1] = '\0';
+	return (dest);
 }

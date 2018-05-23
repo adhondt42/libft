@@ -5,19 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 19:13:22 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/23 18:17:45 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/22 21:23:15 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:23:34 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void				*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned char	*tmp;
 
-	i = 0;
-	while (i < n)
-		((char*)s)[i++] = (unsigned char)c;
+	tmp = (unsigned char *)s;
+	while (n > 0)
+	{
+		*tmp = (unsigned char)c;
+		tmp++;
+		n--;
+	}
 	return (s);
 }

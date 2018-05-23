@@ -5,25 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:17:36 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/23 22:16:36 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/22 21:24:21 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/22 21:24:22 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-int		ft_strcmp(const char *tab, const char *tab2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int		i;
-	int		nb;
-	char	*s1;
-	char	*s2;
+	int i;
 
-	s1 = (char *)tab;
-	s2 = (char *)tab2;
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	nb = ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	return (nb);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
