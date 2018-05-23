@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 16:31:57 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 19:27:46 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct	s_list
 
 
 
+void			ft_putinttab(int *tab, int size, char *sp);
 char			*add_nendchar(char *str, char c, size_t n);
 char			*add_nfrontchar(char *str, char c, size_t n);
 char			*add_frontchar(char *str, char c);
