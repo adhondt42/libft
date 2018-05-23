@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:25:06 by adhondt           #+#    #+#             */
-/*   Updated: 2018/03/22 15:06:00 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 19:41:10 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*cs;
 
+	if (!s)
+		return (NULL);
 	cs = (char *)s;
 	while (*cs != c && *cs)
 		cs++;
