@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 12:16:27 by adhondt           #+#    #+#              #
-#    Updated: 2018/05/23 19:28:18 by adhondt          ###   ########.fr        #
+#    Updated: 2018/05/24 17:47:04 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ addtotab_f.c puttab.c ft_put2str.c ft_put3str.c ft_swapptr.c sorttab_ascii.c \
 sorttab_rev.c intlen.c ft_ftype.c ft_put4str.c ft_putstr_c.c ft_putnstr.c \
 createpath.c get_lstat.c ft_readdir.c dirlen.c free2.c free3.c free4.c \
 ft_free2tab.c add_frontchar.c add_nendchar.c add_nfrontchar.c ft_chardup.c \
-ft_memalloc_c.c ft_strcnew.c pos_in_str.c ft_putinttab.c \
+ft_memalloc_c.c ft_strcnew.c pos_c_str.c ft_putinttab.c ft_putinttab.c  \
+pos_str_tab.c \
 
 OBJ = $(SRC:.c=.o)
 

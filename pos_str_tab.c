@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putinttab.c                                     :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 19:24:13 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 19:31:04 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/17 22:40:59 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/24 10:50:45 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	ft_putinttab(int *tab, int size, char *sp)
+int		pos_str_tab(char *haystack, char **needle)
 {
 	int	i;
 
 	i = 0;
-	while (i < size)
-	{
-		ft_putnbr(tab[i]);
-		ft_putstr(sp);
+	while (ft_strcmp(haystack, needle[i]) != 0)
 		i++;
-	}
+	if (ft_strcmp(haystack, needle[i]) == 0)
+		return (i);
+	return (-1);
 }
-
-
-

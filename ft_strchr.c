@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:25:06 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 19:41:10 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 19:49:15 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/push_swap.h"
 
 char	*ft_strchr(const char *s, int c)
 {
