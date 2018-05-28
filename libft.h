@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/24 17:48:05 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/28 23:21:20 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ typedef struct	s_list
 
 
 
-
+void			swap_int(int *a, int *b);
+int				*copy_inttab(int *a, int alen);
 int				pos_str_tab(char *haystack, char **needle);
 void			ft_putinttab(int *tab, int size, char *sp);
 char			*add_nendchar(char *str, char c, size_t n);

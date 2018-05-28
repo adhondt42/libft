@@ -6,11 +6,11 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 19:24:13 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 19:31:04 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/28 23:27:51 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "libft.h"
 
 void	ft_putinttab(int *tab, int size, char *sp)
 {
